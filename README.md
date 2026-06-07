@@ -6,7 +6,7 @@ A ready-to-use Telegram Mini App template for Hermes Agent. Fork this and add yo
 
 ```bash
 # 1. Clone your fork
-git clone https://github.com/YOUR_USERNAME/hermes-miniapp-template.git
+git clone https://github.com/waguriagentic/hermes-miniapp-template.git
 cd hermes-miniapp-template
 
 # 2. Install dependencies
