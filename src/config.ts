@@ -4,7 +4,7 @@
  * Tab definitions live in App.tsx (primaryTabs / secondaryTabs).
  */
 
-export const APP_NAME = 'Hermes Mini App';
+export const APP_NAME = 'Hermes Ops Mini App';
 export const APP_VERSION = '1.0.0';
 
 /**

@@ -1,15 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { APP_NAME, APP_VERSION, DEFAULT_API_BASE } from '../config';
 import { showToast } from '../components/Toast';
 
 export default function Settings() {
-  const [apiBase, setApiBase] = useState(DEFAULT_API_BASE);
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-
-  useEffect(() => {
-    setApiBase(localStorage.getItem('api_base') || DEFAULT_API_BASE);
-    setTheme((localStorage.getItem('theme') as 'dark' | 'light') || 'dark');
-  }, []);
+  const [apiBase, setApiBase] = useState(() => localStorage.getItem('api_base') || DEFAULT_API_BASE);
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => (localStorage.getItem('theme') as 'dark' | 'light') || 'dark');
 
   const saveApiBase = () => {
     localStorage.setItem('api_base', apiBase);

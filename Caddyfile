@@ -1,0 +1,21 @@
+:9121 {
+    encode gzip zstd
+
+    handle_path /dashboard/* {
+        reverse_proxy 127.0.0.1:9119
+    }
+
+    handle_path /ccgen/* {
+        reverse_proxy 127.0.0.1:9122
+    }
+
+    handle_path /video/* {
+        reverse_proxy 127.0.0.1:8888
+    }
+
+    handle {
+        root * /home/kupraa/hermes-miniapp-template/dist
+        try_files {path} /index.html
+        file_server
+    }
+}
