@@ -35,8 +35,17 @@
   padding-bottom: env(safe-area-inset-bottom, 0);
   flex-shrink: 0;
 }
+.scroll-tabs {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.scroll-tabs::-webkit-scrollbar {
+  display: none;
+}
 .tab-item {
   flex: 1;
+  min-width: 72px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -513,6 +522,21 @@
 .action-row .btn {
   flex: 1;
   min-width: 105px;
+}
+.button-cluster {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.command-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+.command-grid .tool-option {
+  margin: 0;
+  text-decoration: none;
 }
 .result-box {
   min-height: 180px;

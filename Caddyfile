@@ -5,6 +5,10 @@
         reverse_proxy 127.0.0.1:9119
     }
 
+    handle_path /9router/* {
+        reverse_proxy 127.0.0.1:20128
+    }
+
     handle_path /ccgen/* {
         reverse_proxy 127.0.0.1:9122
     }
